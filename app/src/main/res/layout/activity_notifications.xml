@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/actifitRed"
+        android:text="@string/your_notifications_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+
+
+    <TextView
+        android:id="@+id/actifit_notifications_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/actifit_transactions_error"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:progress="@integer/material_motion_duration_long_1"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/actifit_notifications"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:dividerHeight="0.1dp"
+        android:divider="@color/colorBlack"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_weight="1"
+        />
+
+    <include
+        android:id="@+id/bottom_menu_container"
+        layout="@layout/footer_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>

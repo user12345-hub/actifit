@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fitbit_tracking_ntt" translatable="false">Fitbit Tracking</string>
+    <string name="device_tracking_ntt" translatable="false">Device Tracking</string>
+    <string name="fitbit_measurements_on_ntt" translatable="false">Fitbit Measurements On</string>
+    <string name="fitbit_measurements_off_ntt" translatable="false">Fitbit Measurements Off</string>
+    <string name="aggr_back_tracking_on_ntt" translatable="false">On</string>
+    <string name="aggr_back_tracking_off_ntt" translatable="false"></string>
+    <string name="metric_system_ntt" translatable="false">Metric System</string>
+    <string name="us_system_ntt" translatable="false">US System</string>
+    <string name="actif_def_not_topic" translatable="false">actidefnots</string>
+    <string name="notification_status" translatable="false">notificationstatus</string>
+    <string name="main_announce_view"  translatable="false">mainAnnounceView</string>
+    <string name="actifit_wake_lock_tag" translatable="false">ACTIFIT:ACTIFIT_SPECIAL_LOCK</string>
+	<string-array name="tokens" translatable="false">
+        <item>HIVE</item>
+        <item>HBD</item>
+    </string-array>
+    <string-array name="supported_languages">
+        <item>English</item>
+        <item>Portuguesa</item>
+        <item>한국어</item>
+        <item>العربية</item>
+        <item>Yorùbá</item>
+        <item>Nederlands</item>
+        <item>हिंदी</item>
+        <item>Italiano</item>
+        <item>Deutsche</item>
+        <item>Español</item>
+        <item>Türk</item>
+        <item>Українська</item>
+        <item>普通话</item>
+    </string-array>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/vote_modal_container"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="@string/voting_note"
+        android:drawableStart="@drawable/actifit_logo" /> <!-- Add your icon drawable here -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity = "center"
+        android:gravity = "center"
+        >
+
+        <TextView
+            android:id="@+id/vote_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/voting_on"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/vote_author"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingLeft = "10dp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/sub_10"
+            style="@style/AppTheme.ActifitButton"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:text="@string/sub_10"
+            />
+
+        <EditText
+            android:id="@+id/vote_weight"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:gravity="center"
+            android:text="10"
+            android:background="@drawable/edittextbackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="%"
+
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/add_10"
+            style="@style/AppTheme.ActifitButton"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:text="@string/add_10"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/close_btn"
+            style="@style/AppTheme.ActifitButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:text="@string/close_button"
+            />
+
+
+
+        <Button
+            android:id="@+id/voters_list_btn"
+            style="@style/AppTheme.ActifitButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:text="@string/voters_list"
+            />
+
+        <Button
+            style="@style/AppTheme.ActifitButton"
+            android:id="@+id/proceed_vote_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="@string/vote_action"
+
+
+            />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:progress="@integer/material_motion_duration_long_1"
+        android:visibility="gone" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entryContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/ic_launcher_background"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="4dp"
+    android:layout_marginLeft="4dp"
+    app:cardUseCompatPadding="true"
+    >
+    <!--
+
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+
+    app:cardMaxElevation="12dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    -->
+
+
+
+    <LinearLayout
+        android:id="@+id/post_entry_container"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:text="title_placeholder"
+                android:paddingLeft="0dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingBottom="20dp">
+
+            <FrameLayout android:id="@+id/author_pic_container"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                >
+
+                <ImageView android:id="@+id/author_pic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/actifit_logo" />
+
+                <ImageView android:id="@+id/circle_crop"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/circle_crop" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="150dp"
+                android:gravity="start"
+                android:textColor="@color/actifitRed"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/rank_container"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/actifitRed"
+                    android:fontFamily="@font/font_awesome_6_solid"
+                    android:text="\uf091"
+                    android:textSize="20sp"
+                    android:paddingRight="5dp"
+                    />
+
+                <TextView android:id="@+id/user_rank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/actifitRed"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:maxWidth="150dp"
+                android:gravity="end"
+                android:textColor="@color/actifitRed"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+        <ImageView android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/actifit_logo"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/translation_notice_lbl"
+                android:text="@string/translation_header"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:color="@color/colorBlack"
+                android:lineSpacingMultiplier="1.3"
+                android:textStyle="italic|bold"
+                android:textColor="@color/actifitRed"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="0dp">
+
+            <!-- TextView -->
+            <TextView
+                android:id="@+id/translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf1ab"
+                android:textColor="@color/actifitRed"
+                android:textSize="32sp"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:layout_weight="1" /> <!-- Pushes ImageView to the right -->
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/threadTypeImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_margin="0dp">
+
+
+            <!--<TextView
+                android:id="@+id/threadType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="none"
+                android:textColor="@color/actifitRed"
+                android:textSize="20sp"
+
+                />-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/post_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/md_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:paddingBottom="20dp"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+               />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/progressBarBody"
+                android:visibility="visible"
+                >
+
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:progress="@integer/material_motion_duration_long_1"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/body"
+                android:text=""
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:color="@color/colorBlack"
+                android:lineSpacingMultiplier="1.3"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/translatedBody"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:color="@color/colorBlack"
+                android:lineSpacingMultiplier="1.3"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            >
+
+
+            <!--<TextView
+                android:id="@+id/permlink"
+                android:text="permlink_placeholder"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/activity_type_container"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/activity_type"
+                    android:text="@string/activity_type_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_type_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_count_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="right"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/steemit_step_count_lbl"
+                    android:text="@string/activity_count_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_count"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:paddingLeft="10dp">
+
+
+
+            <TextView
+                android:id="@+id/payout_icon"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/actifitRed"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf3d1"
+                android:textSize="35dp"
+
+                android:paddingLeft="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/payout_val"
+                android:text="0"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                />
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/hive"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right">
+
+
+
+                <TextView
+                    android:id="@+id/afit_rewards"
+                    android:text="0"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/afit_logo"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/actifit_logo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp">
+
+            <Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/reply_button"
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf3e5"
+                android:gravity="center"
+                />
+
+            <Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/upvote_button"
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf164"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/upvote_count"
+                android:text="0"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/comment_button"
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf086"
+                />
+
+            <TextView
+                android:id="@+id/comment_count"
+                android:text="0"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/expand_button"
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf103"
+                />
+
+            <Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/retract_button"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf102"
+                android:visibility="gone"
+                />
+
+            <!--<Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/test_button"
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf103"
+                android:layout_weight="1"
+                />-->
+
+            <Button
+                style="@style/AppTheme.ActifitButton"
+                android:id="@+id/share_social"
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/font_awesome_6_solid"
+                android:text="\uf1e0"
+                />
+
+
+        </LinearLayout>
+        </HorizontalScrollView>
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:progress="@integer/material_motion_duration_long_1"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/comments_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:dividerHeight="0dp"
+            android:divider="#0000CC"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
