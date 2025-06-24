@@ -7,3 +7,5 @@ android:shape="oval">
     android:width="14dp"
     android:height="14dp" />
 </shape>
+
+<!--i added this for task (Improve layout of gadgets on main screen)-->
